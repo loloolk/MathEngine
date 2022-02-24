@@ -5,5 +5,5 @@
 
 int main() {
     mtn::Vector3 playerLocation(0, 0, 0);
-    a.x = 5;
+    playerLocation.x = 5;
 }
