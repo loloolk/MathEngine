@@ -49,4 +49,36 @@ namespace mtn {
         x = std::abs(x);
         y = std::abs(y);
     }
+
+
+    line::line():start(0.0, 0.0), end(0.0, 0.0) {}
+    line::line(Vector2 s, Vector2 e):start(s), end(e) {}
+    line::line(const line& l):start(l.start), end(l.end) {}
+    line::~line() {}
+
+    line& line::operator = (const line& l) {
+        start = l.start;
+        end = l.end;
+        
+        return * this;
+    }
+    void line::operator += (const Vector2& v) {
+        start += v;
+        end += v;
+    }
+    line line::operator + (const Vector2& v) const {
+        return line(start + v, end + v);
+    }
+    void line::operator -= (const Vector2& v) {
+        start -= v;
+        end -= v;
+    }
+    line line::operator - (const Vector2& v) const {
+        return line(start - v, end - v);
+    }
+
+    Vector2& halfway(const line& l) {
+        return mtn::Vector2((l.start.x + l.end.x) / 2, (l.start.y + l.end.y) / 2);
+    }
+
 }
