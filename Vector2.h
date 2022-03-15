@@ -28,6 +28,7 @@ namespace mtn {
             float operator * (const Vector2& v) const;
 
             void absolute();
+            float dot(Vector2 a, Vector2 b);
     };
 }
 

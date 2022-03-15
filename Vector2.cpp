@@ -49,6 +49,9 @@ namespace mtn {
         x = std::abs(x);
         y = std::abs(y);
     }
+    float Vector2::dot(Vector2 a, Vector2 b) {
+        return a.x * b.x + a.y * b.y;
+    }
 
 
     /*Vector2 halfway(const line& l) {
