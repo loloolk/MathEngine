@@ -77,7 +77,7 @@ namespace mtn {
         return line(start - v, end - v);
     }
 
-    Vector2& halfway(const line& l) {
+    Vector2 halfway(const line& l) {
         return mtn::Vector2((l.start.x + l.end.x) / 2, (l.start.y + l.end.y) / 2);
     }
 
