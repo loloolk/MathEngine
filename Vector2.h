@@ -17,6 +17,7 @@ namespace mtn {
             ~Vector2();
             
             Vector2& operator = (const Vector2& v);
+            bool operator == (const Vector2& v);
             void operator += (const Vector2& v);
             Vector2 operator + (const Vector2& v)const;
             void operator -= (const Vector2& v);

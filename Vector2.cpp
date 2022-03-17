@@ -13,6 +13,9 @@ namespace mtn {
         
         return * this;
     }
+    bool Vector2::operator == (const Vector2& v) {
+        return (x == v.x && y == v.y);   
+    }
     void Vector2::operator += (const Vector2& v) {
         x += v.x;
         y += v.y;
