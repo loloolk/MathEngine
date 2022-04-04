@@ -16,6 +16,10 @@ namespace mtn {
     bool Vector2::operator == (const Vector2& v) {
         return (x == v.x && y == v.y);   
     }
+    std::ostream& operator <<(std::ostream& os, const mtn::Vector2& v) {
+        os << "(" << v.x << ", " << v.y << ")";
+        return os;
+    }
     void Vector2::operator += (const Vector2& v) {
         x += v.x;
         y += v.y;
